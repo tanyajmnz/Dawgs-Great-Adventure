@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawg's Great Adventure | Index</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+@keyframes clouds {
+    from {
+        background-position: -15%;
+    } to {
+        background-position: 5%;
+    }
+}
+
+body {
+    background-color: #8AC926;
+    font-family: 'Alata', display;
+    background-image: url('cloudz.png');
+    background-size: 35%;
+    background-position: -5%;
+    animation: clouds 2s linear infinite alternate;
+}
+
+.head1 {
+    color:white;
+    text-shadow:3px 3px black;
+    text-align: center;
+    margin-top:30px;
+    margin-bottom: 60px;
+    font-family:'Silkscreen', display;
+    font-weight: 900;
+}
+
+.btn1 {
+    font-family:'Silkscreen', display;
+    width:125px;
+    height:70px;
+    font-size:30px;
+}
+
+#bmodal {
+    font-family:'Silkscreen', display;
+    width:170px;
+    height:110px;
+    font-size:30px;
+}
+
+.btn3 {
+    font-family:'Silkscreen', display;
+    width:230px;
+    height:110px;
+    font-size:30px;
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 5px 5px 0px black;
+}
+
+</style>
+
+</head>
+<body>
+<div class="container">
+<h1 class="head1"> Dawg's Great Adventure </h1>
+
+<div class="row m-0 text-center">
+<div class="col-md-4 m-0 p-2"> <button type="button" class="btn3" onclick="window.location.href='abtthedevs.html'"> ABOUT THE DEVELOPERS </button> </div>
+<div class="col-md-4 m-0 p-2"> <button type="button" class="btn1" onclick="window.location.href='dawg.html'"> START </button> </div>
+<div class="col-md-4 m-0 p-2"> <button type="button" id="bmodal"> HOW TO PLAY </button> </div>
+
+<div class="modal" id="mymodal">
+
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>How to Play</h2>
+        <p>The mechanics of the game are very simple!</p>
+        <p> The game will start once you click the start button. </p>
+        <p> Dawg will move and you simply have to press the up arrow key in order to dodge the obstacles.</p>
+        <p> If you need to crouch in order to dodge obstacles in the air, press the down arrow key.</p>
+        <p> Do your best to avoid the obstacles in order to score higher points.</p>
+        <p> Every obstacle that you dodge adds to your score. </p>
+        <p> Once you have dodged 100 obstacles, you win! Dawg's adventure shall be over. </p>
+        <p> Goodluck and enjoy, and don't forget to recommend this game to your friends!</p>
+    </div>
+</div>
+</div>
+
+</div>
+
+    <script>
+       var modal = document.getElementById("mymodal");
+        var btn = document.getElementById("bmodal");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
+</body>
+</html>
